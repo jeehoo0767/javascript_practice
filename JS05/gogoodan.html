@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    출력단 입력 <input type="text" id="num">
+    <br><br>
+
+    <button type="button" id="resBtn" onclick="googoo()">확인</button>
+    <br><br>
+    결과 : <span id="result"></span>
+
+    <script>
+        
+        function googoo() {
+            let num = document.getElementById("num").value;
+            let result = document.getElementById("result");
+
+            num = parseFloat(num);
+            var resultString = "";
+            for (var i = 1; i < 10; i++) {
+                resultString +="<br>" + num + "*" + i + "=" + num*i;
+            }
+            result.innerHTML = resultString.toString();
+        }
+    </script>
+</body></html>

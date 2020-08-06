@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+   <div id="wrap">
+       <h1>js input</h1>
+       
+       <h2>html input</h2>
+       input1 <input type="text" value="가나다" size="10" id="data1">
+       <button type="button" onclick="fnData()">전달확인</button>
+       <br>
+       <select name="" id="a">
+           <option value="-">-선택-</option>
+           <option value="값1">1</option>
+       </select>
+   </div>
+    <script>
+        function fnData(){
+            alert(document.querySelector("option:first-child").value);
+        }
+    </script>
+</body>
+</html>

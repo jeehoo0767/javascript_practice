@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>n1~n2까지 값 더하기</h1>
+    n1 <input type="text" id="n1"><br><br>
+<!--    n2 <input type="text" id="n2"><br><br>-->
+    <button type="button" id="btn" onclick="loop()">OK!</button><br>
+    <span id="res"></span>
+    
+    <script>
+   function loop(){
+        var n1 = document.getElementById("n1").value;
+//        var n2 = document.getElementById("n2").value;
+        var result = document.getElementById("res");
+        var resultString = "";
+        n1 = parseInt(n1);
+//        n2 = parseInt(n2);
+        for(var i = 1; i<=n1; i++){
+            if(n1%i==0){
+                resultString += i+",";
+            }
+        }
+        result.innerHTML = resultString.toString().substring(0,resultString.length-1);
+    }
+    
+    </script>
+    
+    
+    
+</body>
+</html>

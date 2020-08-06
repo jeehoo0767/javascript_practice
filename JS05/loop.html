@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>출력</h1>
+    <h4>정수입력</h4>
+    <input type="text" id="input_Number">
+    <br>
+    <br>
+    <button type="button" id="okBtn" onclick="loop()">확인</button>
+    <br><br>
+    결과 : <span id="result"></span>
+    
+    <script>
+        function loop() {
+            var num = document.getElementById("input_Number").value;
+
+            var res = document.getElementById("result");
+
+            num = parseInt(num);
+
+            var i = 1;
+
+            var resultString = "";
+
+            for (i; i <10; i++) {
+                    resultString += "<br>" + num + "*" + i + "=" + num*i;
+            }
+
+            res.innerHTML = resultString;
+        }
+        
+        
+        
+        
+
+    </script>
+</body>
+
+</html>

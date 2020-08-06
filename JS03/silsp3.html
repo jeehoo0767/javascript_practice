@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>외부js</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <h1>
+            이벤트핸들러+내/외부 JS
+        </h1>
+        <h2 onclick="warn()">
+            클릭하면 경고창
+        </h2>
+
+        <h2 id="ho">마우스 올리면 색 변경</h2>
+    </div>
+    <script src="script_1_3.js"></script>
+    <script>
+        function warn() {
+            alert("경고");
+        }
+
+        document.getElementById("ho").addEventListener("mouseover", function(){
+            document.getElementById("ho").style.color = "red";
+        });
+        document.getElementById("ho").addEventListener("mouseout", function(){
+            document.getElementById("ho").style.color = "black";
+        });
+    </script>
+</body></html>

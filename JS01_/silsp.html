@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript 시작</title>
+    <style>
+        h2#sample {
+            color: #f80;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JS는 모든 html,css 를 제어 가능</h1>
+    <h2 id="sample" onmouseover="document.getElementById('sample').innerHTML = '<mark><u>변경결과</u></mark>' ";>제어대상</h2>
+
+    <script type="text/javascript">
+        onmouseover = "document.getElementById('sample').innerHTML = '<mark><u>변경결과</u></mark>' ";
+    </script>
+</body></html>

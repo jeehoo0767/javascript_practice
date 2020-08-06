@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>html/javascript</title>
+    <style>
+        * {
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="https://www.daum.net" id="frm">
+        입력(*필수)
+        <input type="text" size="5" maxlenth="5" id="txt" value="asd"><br><br>
+        <button type="button" onclick="sbm()">
+            유효성검사 후 전송
+        </button>
+        <button type="button" onclick="reset_page()">
+            리셋
+        </button>
+    </form>
+    <script>
+
+        function sbm() {
+            var txt = document.getElementById("txt").value;
+                if (txt== "") {
+                    alert("공백안됨");
+                }
+                else{
+                    document.getElementById("frm").submit();
+                }
+            }
+        
+        function reset_page(){
+            document.getElementById("frm").reset();
+        }
+            
+    </script>
+
+</body></html>

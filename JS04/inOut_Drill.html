@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 30px;
+        }
+
+        p {
+            width: 300px;
+            border-bottom: 1px solid #000;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>HTML / JS 입출력관계</h1>
+
+    인풋요소 <input type="text" id="a" value="1"><br>
+    
+    피 요소 <p id="b">텍스트</p><br>
+    
+    <button type="button" onclick="fnGo1()">
+        클릭1번(input=>p)
+    </button>
+
+    <button type="button" onclick="fnGo2()">
+        클릭2번(p=>input)
+    </button>
+    <script>
+        function fnGo1() { //클릭1
+            var a = document.getElementById("a").value;
+            document.getElementById("b").innerHTML = a;
+        }
+
+        function fnGo2() { //클릭2
+            var b = document.getElementById("b").text;
+        }
+
+    </script>
+</body>
+
+</html>
